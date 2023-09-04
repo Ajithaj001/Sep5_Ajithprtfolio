@@ -13,7 +13,7 @@ export class TechnicalSKillsComponent {
   technicalSkills = [
     {id:'1', skillName: "Angular" , progress : 95 , imagePath:'../assets/angular2.png'},
     {id:'2', skillName: "HTML", progress : 95, imagePath:'../assets/html.png'},
-    {id:'3', skillName: "CSS", progress:80},
+    {id:'3', skillName: "CSS", progress:80, imagePath:'../assets/CSS.png'},
     {id:'4', skillName: "JavaScript", progress: 80},
     {id:'5', skillName: "Bootstrap",progress:75},
     {id:'6', skillName: "SQL", progress: 65}
