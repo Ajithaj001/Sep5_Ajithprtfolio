@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <div class="row flex-wrap ">
+        <div class="col-md-6 p-2 d-flex  homeImage ">
+            <img class="  " src="../assets/MyImage.JPG" alt="" >
+            
+        </div>
+        <div class="col-md-6  home">
+            <p class=" fs-3 mr-5 text-sm-start position-absolute top-50 start-53 translate-middle text-white  "> Hi I am <span class=" fw-bolder name">Ajith</span> ,a passionate frontend developer dedicated <br>to creating engaging and user-friendly web experiences.</p>
+           
+        </div>
+        
+        <!-- <div class="col-md-12">
+            <button class="btn btn-primary ">Click Mefewfew</button>
+        </div> -->
+       
+    </div> 
+    <div *ngIf="isloading" class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    <div class="row">
+        <div class=" home-btn col-md-12">
+            <button  (click)="OnClick()"class="btn btn-primary  position-absolute top-70 start-50 translate-middle" >{{ isVisible ? "hide":"view more"}}</button>
+        </div>
+
+    </div>
+    
+        
+    
+    </div> <br><br>
+    
+    <router-outlet  *ngIf="isVisible"></router-outlet>

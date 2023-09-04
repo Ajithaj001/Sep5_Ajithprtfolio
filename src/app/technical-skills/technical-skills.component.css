@@ -1,0 +1,18 @@
+.progress-bar {
+    background-color: rgb(28, 160, 5);
+    border-right: 50%;
+}
+
+.progress {
+    background-color: black;
+}
+
+.skills {
+    position: absolute;
+    left: 23%;
+}
+
+
+/* .icon{
+    mix-blend-mode: color-burn;
+} */

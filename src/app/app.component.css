@@ -1,0 +1,21 @@
+.nav-name a{
+    text-decoration: none;
+    color: rgb(28, 160, 5);
+}
+.nav-name a:hover{
+    transform: scale(1.2); 
+    text-shadow: 5px;
+}
+.header img{
+    /* mix-blend-mode: color-burn;
+    fill: rgb(28, 160, 5) ; */
+    background-color: rgb(28, 160, 5);
+    
+}
+@media screen and (max-width:786px){
+    .nav-name a{
+       margin-left: 40px;
+    }
+   
+    
+}
