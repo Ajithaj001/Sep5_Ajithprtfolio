@@ -12,7 +12,21 @@
     left: 23%;
 }
 
+.icon {
+    width: 25px;
+    height: 20px;
+    /* position: fixed; */
+    /* position: absolute; */
+}
+
 
 /* .icon{
     mix-blend-mode: color-burn;
 } */
+
+@media (max-width: 768px) {
+    .skills {
+        position: absolute;
+        top: 124%;
+    }
+}

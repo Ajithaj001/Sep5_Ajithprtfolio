@@ -1,22 +1,24 @@
-.carousel-item{
+.carousel-item {
     left: 350px;
-    
-   
 }
-.card{
+
+.card {
     background-color: transparent;
-    border: 2px solid  rgb(28, 160, 5) ;
-
+    border: 2px solid rgb(28, 160, 5);
 }
-.card-header{
+
+.card-header {
     /* border: 2px solid  rgb(28, 160, 5) ; */
-    border-bottom:2px solid  rgb(28, 160, 5) ;
-
+    border-bottom: 2px solid rgb(28, 160, 5);
 }
+
+
 /* .carousel-control-prev-icon .carousel-control-next-icon{
     background-color:rgb(28, 160, 5) ;
     color:rgb(28, 160, 5) ;
 } */
+
+
 /* .carousel-control-prev-icon::before{
     color: red !important ;
     background-color: rgb(28, 160, 5);
@@ -24,55 +26,42 @@
 .carousel-control-prev{
     color: red !important ;
 } */
-@media (max-width: 768px){
-    .carousel{
-       position: relative;
+
+@media (max-width: 768px) {
+    .carousel {
+        position: relative;
         top: 700px;
         left: 1%;
-        
-        
-        
-       
     }
-    .carousel-item{
+    .carousel-item {
         left: 5%;
         width: 570px;
-        
     }
-    .card-body{
+    .card-body {
         max-height: 100px;
         width: 300px;
         overflow-y: scroll;
+        scrollbar-color: blue;
         /* scrollbar-width:40px;
         scrollbar-color: red; */
         left: 2%;
-       
     }
-    
-  
 }
 
-@media (max-width:1170px){
-    .carousel{
+@media (max-width:1170px) {
+    .carousel {
         position: relative;
-         top: 700px;
-         left: 1%;
-         
-         
-        
-     }
-     .carousel-item{
-         left: 15%;
-         width: 570px;
-     }
-     .card-body{
-         max-height: 100px;
-         width: 300px;
-         overflow-y: scroll;
-         scrollbar-width:40px;
-        
-     }
-     
-   
- }
-
+        top: 700px;
+        left: 1%;
+    }
+    .carousel-item {
+        left: 15%;
+        width: 570px;
+    }
+    .card-body {
+        max-height: 100px;
+        width: 300px;
+        overflow-y: scroll;
+        scrollbar-width: 40px;
+    }
+}
