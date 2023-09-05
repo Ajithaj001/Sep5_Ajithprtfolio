@@ -40,28 +40,31 @@
     .card-body {
         max-height: 100px;
         width: 300px;
+        /* overflow-x: hidden; */
         overflow-y: scroll;
-        scrollbar-color: blue;
         /* scrollbar-width:40px;
         scrollbar-color: red; */
-        left: 2%;
     }
 }
 
 @media (max-width:1170px) {
     .carousel {
         position: relative;
-        top: 700px;
+        top: 655px;
+        left: 1%;
+        /* width: 300px; */
+    }
+    .carousel-control-prev-icon {
         left: 1%;
     }
     .carousel-item {
-        left: 15%;
+        left: 8%;
         width: 570px;
     }
     .card-body {
         max-height: 100px;
         width: 300px;
+        /* overflow-x: hidden; */
         overflow-y: scroll;
-        scrollbar-width: 40px;
     }
 }

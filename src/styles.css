@@ -1,6 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+
+
 /* You can add global styles to this file, and also import other style files */
-body{
+
+body {
     background-color: rgb(33, 31, 31);
-    
 }
+
+
+/* html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+} */
+
+
+/*                                 
+                                @media (max-width: 768px) {
+                                    html,
+                                    body {
+                                        margin: 0;
+                                        padding: 0;
+                                        overflow-x: hidden;
+                                    }
+                                } */

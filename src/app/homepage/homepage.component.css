@@ -1,68 +1,67 @@
-.home p{
+.home p {
     /* position: absolute;
     top: 50%;
     left: 40%;
     text-align:start; */
     opacity: 0;
     animation: fadeIn 4s ease-out 2s forwards;
-     
-     
- }
- .homeImage img{
-     /* position: absolute;
+}
+
+.homeImage img {
+    /* position: absolute;
  
      top: 10%;
      left: 10%; */
-     width: 300px;
-     border: 2px solid rgb(28, 160, 5);
-     opacity: 0;
+    width: 300px;
+    border: 2px solid rgb(28, 160, 5);
+    opacity: 0;
     animation: fadeIn 2s ease-out 1s forwards;
- }
- .spinner-border{
+}
+
+.spinner-border {
     width: 100px;
     height: 100px;
-    color:rgb(28, 160, 5) ;
+    color: rgb(28, 160, 5);
     position: absolute;
     left: 50%;
     top: 50%;
- }
- .home-btn button{
-     opacity: 0;
-     border:2px solid rgb(28, 160, 5) ;
-     border-radius: 10%;
-     animation: fadeIn 5s ease-out 3s forwards;
- 
- }
- .home-btn:hover{
-     transform: scale(1.1);
- 
- }
- 
- 
- .homeImage img:hover{
-     transform: scale(1.1); 
-     transition-delay:0.3s;
-     
- }
- @keyframes fadeIn {
-     from{
-         opacity: 0;
-     }
-     to{
-         opacity: 1;
-     }
- }
- 
- .name{
-     color: rgb(28, 160, 5);
-     
-     
- }
- .home-btn button{
-     background-color:rgb(28, 160, 5) ;
- }
- 
- /* @media screen and (max-width:786px){
+}
+
+.home-btn button {
+    opacity: 0;
+    border: 2px solid rgb(28, 160, 5);
+    border-radius: 10%;
+    animation: fadeIn 5s ease-out 3s forwards;
+}
+
+.home-btn:hover {
+    transform: scale(1.1);
+}
+
+.homeImage img:hover {
+    transform: scale(1.1);
+    transition-delay: 0.3s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.name {
+    color: rgb(28, 160, 5);
+}
+
+.home-btn button {
+    background-color: rgb(28, 160, 5);
+}
+
+
+/* @media screen and (max-width:786px){
   .home p{
        top: 90%;
        color: black;
@@ -72,62 +71,51 @@
          left: 1%;
      }
  } */
- 
- /* @media (max-width: 768px) { 
+
+
+/* @media (max-width: 768px) { 
      .home p{
          top: 90%;
          
        }
   } */
-  @media (max-width: 768px) {
-     .homeImage img {
-       position: absolute;
-       /* width: 100%; */
-       max-height: 420px;
-       right: 8%;
-       justify-content: start;
-      
-       
-     }
-   
-     .home {
-         
-         height: 140px;
-         position: absolute;
-         
-         left: 56%;
-         justify-content: center;
-         object-fit: cover;
-     }
-     .home-btn{
-         
-         position: absolute;
-         top: 83%;
-     }
-   
-     
-   }
-   @media (max-width:1170px){
-    .homeImage{
+
+@media (max-width: 768px) {
+    .homeImage img {
+        position: absolute;
+        /* width: 100%; */
+        max-height: 420px;
+        right: 5%;
+        justify-content: start;
+    }
+    .home {
+        height: 140px;
+        position: absolute;
+        left: 56%;
+        justify-content: center;
+        object-fit: cover;
+    }
+    .home-btn {
+        position: absolute;
+        top: 83%;
+    }
+}
+
+@media (max-width:1170px) {
+    .homeImage {
         position: absolute;
         max-height: 410px;
         right: 4%;
     }
-   .home{
-    position: absolute;
-    top: 72%;
-    max-width: 400px;
-    text-align: center;
-    
-    left: 48%;
-   
-   }
-   .home-btn{
-         
-    position: absolute;
-    top: 96%;
+    .home {
+        position: absolute;
+        top: 72%;
+        max-width: 400px;
+        text-align: center;
+        left: 48%;
+    }
+    .home-btn {
+        position: absolute;
+        top: 96%;
+    }
 }
-   }
-   
-   
-   
