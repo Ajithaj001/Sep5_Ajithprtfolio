@@ -5,6 +5,25 @@
 
 body {
     background-color: rgb(33, 31, 31);
+    overflow-x: hidden;
+}
+
+@media (max-width:768px) {
+    /* body {
+        overflow-x: hidden ;
+    } */
+    /* body {
+        overflow-x: hidden;
+    } */
+}
+
+@media (max-width:1170px) {
+    /* body {
+        overflow-x: hidden ;
+    } */
+    /* body {
+        overflow-x: hidden;
+    } */
 }
 
 

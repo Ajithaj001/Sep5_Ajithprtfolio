@@ -1,18 +1,37 @@
 <div class="container-fluid ">
-    <div class=" align-items-center skills w-100 ">
-        <h2 class="text-white text">My skills</h2>
-        <div class="row " *ngFor=" let skills of technicalSkills">
-            <div class="col ">
+    <div class="row">
+        <div class="  skills w-50 ">
+            <h2 class="text-white text">My skills</h2>
+            <div class="row " *ngFor=" let skills of technicalSkills">
+                <div class="col ">
 
-                <p class="text-white"> <img class="icon " src={{skills.imagePath}} alt="">&nbsp;{{skills.skillName}}</p>
-                <div class="progress w-50" role="progressbar" aria-label="Example 1px high" [attr.aria-valuenow]="skills.progress" aria-valuemin="0" aria-valuemax="100">
-                    <div class="progress-bar  " [style.width.%]="skills.progress"></div>
+                    <p class="text-white"> <img class="icon " src={{skills.imagePath}} alt="">&nbsp;{{skills.skillName}}</p>
+                    <div class="progress w-100" role="progressbar" aria-label="Example 1px high" [attr.aria-valuenow]="skills.progress" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar  " [style.width.%]="skills.progress"></div>
+                    </div>
+
                 </div>
+            </div>
 
+
+        </div>
+        <div class="footer">
+            <hr class="text-success">
+
+            <div class="row g-3 flex-wrap">
+                <p class="text-white">Enquirey</p>
+                <div class="col-md-6  ">
+                    <input type="text" class="form-control input-placeholder-color" placeholder="First name" aria-label="First name">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" class="form-control input-placeholder-color" placeholder="Last name" aria-label="Last name">
+                </div>
             </div>
         </div>
 
+
     </div>
+
 
 
 </div>

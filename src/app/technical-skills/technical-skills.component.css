@@ -1,3 +1,14 @@
+.form-control {
+    background-color: transparent;
+    outline: 2px solid rgb(28, 160, 5);
+    border: none;
+}
+
+.input-placeholder-color::placeholder {
+    color: rgb(242, 235, 235);
+    /* Replace 'red' with your desired color */
+}
+
 .progress-bar {
     background-color: rgb(28, 160, 5);
     border-right: 50%;
@@ -8,7 +19,8 @@
 }
 
 .skills {
-    position: absolute;
+    /* position: absolute; */
+    position: relative;
     left: 23%;
 }
 
@@ -27,6 +39,24 @@
 @media (max-width: 768px) {
     .skills {
         position: absolute;
-        top: 124%;
+        top: 127%;
+    }
+}
+
+@media (max-width:1170px) {
+    .footer {
+        position: absolute;
+        top: 197%;
+    }
+    .skills {
+        position: absolute;
+        top: 142%;
+    }
+    .container-fluid {
+        width: 100%;
+        /* Override width */
+        margin: 0;
+        /* Override margin */
+        padding: 0;
     }
 }

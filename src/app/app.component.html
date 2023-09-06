@@ -2,28 +2,40 @@
 
 
     <header>
-        <nav class="nav d-flex text-white">
 
-
-            <div class="col-md-10 fs-5 header ">
-                <img src="../assets/logo1.png " alt="" width="20px"> MyPortfoliooo
-            </div>
-            <div class="row d-flex justify-content-end ">
-                <div class="col d-flex nav-name">
-                    <a routerLink="Homepage">Home</a>&nbsp;&nbsp;
-                    <a href="">Contact</a>
+        <nav class="navbar navbar-expand-lg  w-100">
+            <div class="container-fluid">
+                <div class="col-md-11 text-white">
+                    <img src="../assets/logo1.png " alt="" width="20px"> MyPortfoliooo
 
                 </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+
+            </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+                    <div class="row d-flex">
+
+                        <div class="col justify-content-end align-items-end">
+                            <div class="navbar-nav">
+                                <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+                                <a class="nav-link" href="#">Features</a>
 
 
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </nav>
     </header>
 
 
 
-</div><br>
-<div>
-    <router-outlet></router-outlet>
+    <body>
+        <router-outlet></router-outlet>
+    </body>
 
-</div>
+</div><br>

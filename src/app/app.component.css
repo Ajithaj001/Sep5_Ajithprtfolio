@@ -1,21 +1,37 @@
-.nav-name a {
+.navbar a {
     text-decoration: none;
     color: rgb(28, 160, 5);
 }
 
-.nav-name a:hover {
+.navbar a:hover {
     transform: scale(1.2);
     text-shadow: 5px;
 }
 
-.header img {
+.navbar button {
+    color: rgb(28, 160, 5);
+    background-color: rgb(28, 160, 5);
+}
+
+.navbar img {
     /* mix-blend-mode: color-burn;
     fill: rgb(28, 160, 5) ; */
     background-color: rgb(28, 160, 5);
 }
 
 @media screen and (max-width:768px) {
-    .nav-name a {
-        margin-left: 38px;
+    .nav-name {
+        margin-left: 40px;
+    }
+}
+
+@media screen and (max-width:1170px) {
+    /* .container {
+        width: 100%;
+        overflow-x: hidden;
+      } */
+    .navbar-nav {
+        flex-direction: row;
+        column-gap: 20px;
     }
 }

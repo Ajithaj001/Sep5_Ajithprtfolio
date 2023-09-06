@@ -12,6 +12,11 @@
     border-bottom: 2px solid rgb(28, 160, 5);
 }
 
+.carousel.carousel-control-prev-icon {
+    color: rgb(28, 160, 5);
+    max-width: 20px;
+}
+
 
 /* .carousel-control-prev-icon .carousel-control-next-icon{
     background-color:rgb(28, 160, 5) ;
@@ -38,7 +43,7 @@
         width: 570px;
     }
     .card-body {
-        max-height: 100px;
+        max-height: 150px;
         width: 300px;
         /* overflow-x: hidden; */
         overflow-y: scroll;
@@ -49,17 +54,14 @@
 
 @media (max-width:1170px) {
     .carousel {
-        position: relative;
-        top: 655px;
+        position: absolute;
+        top: 730px;
         left: 1%;
-        /* width: 300px; */
-    }
-    .carousel-control-prev-icon {
-        left: 1%;
+        width: 390px;
     }
     .carousel-item {
-        left: 8%;
-        width: 570px;
+        left: 12%;
+        width: 580px;
     }
     .card-body {
         max-height: 100px;
