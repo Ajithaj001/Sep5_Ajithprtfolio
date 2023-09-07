@@ -10,7 +10,7 @@ export class DetailviewComponent {
 
   projectdetails = [
     {id:"1", projectname:"Yoga teaching platform", description:"worked with the team in designing and developing a dynamic web application for a onine yoga teaching platforn, enhancing user engagement and accessibility. Levetaged html,css,javascrit,Angular,Bootstrap, and material UI to create an intutive and responsive user interface", duration:": January 2023 – May 2023"},
-    {id:"2", projectname:"gym portfolio", description:" Designed and developed a dynamic web application showcasing gym details using html,css,javascript. created an interactive platform that effectively communicated gym offerings, class schedule, trauners profiles, and membership information to potentialclients"}
+    {id:"2", projectname:"Gym portfolio", description:" Designed and developed a dynamic web application showcasing gym details using html,css,javascript. created an interactive platform that effectively communicated gym offerings, class schedule, trauners profiles, and membership information to potentialclients"}
   ]
   indexid = this.projectdetails.map((a)=>a.id)
   currentindex =0
@@ -27,7 +27,7 @@ export class DetailviewComponent {
     setInterval(()=>{
       this.nextSlide()
 
-    },5000)
+    },10000)
   }
   
   nextSlide(){

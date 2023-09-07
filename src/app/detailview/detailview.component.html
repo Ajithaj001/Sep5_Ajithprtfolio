@@ -4,7 +4,7 @@
             <div class="carousel-item" *ngFor="let details of projectdetails; let i = index" [class.active]="i === currentindex">
                 <div class="card text-white w-50">
                     <div class="card-header">
-                        <p>{{details.projectname}}</p>
+                        <p class="fw-semibold "><span class="Ptitle">Project Name :</span> {{details.projectname}}</p>
                     </div>
                     <div class="card-body border-success">
                         <blockquote class="blockquote mb-0">
@@ -18,11 +18,12 @@
             </div>
         </div>
         <button class="carousel-control-prev " type="button" data-bs-target="#carouselExample" data-bs-slide="prev" (click)="prevSlide()">
-      <span class="carousel-control-prev-icon   " aria-hidden="true"></span>
+          
+          <i class="fa-solid fa-4x  fa-chevron-left arrow"></i>
       <span class="visually-hidden ">Previous</span>
     </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next" (click)="nextSlide()">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <i class="fa-solid fa-4x  fa-chevron-right arrow"></i>
       <span class="visually-hidden">Next</span>
     </button>
     </div>

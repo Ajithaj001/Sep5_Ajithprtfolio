@@ -1,12 +1,12 @@
 <div class="container-fluid ">
     <div class="row">
-        <div class="  skills w-50 ">
-            <h2 class="text-white text">My skills</h2>
+        <div class="  skills  ">
+            <h2 class="text-white text text-center">My skills</h2>
             <div class="row " *ngFor=" let skills of technicalSkills">
                 <div class="col ">
 
                     <p class="text-white"> <img class="icon " src={{skills.imagePath}} alt="">&nbsp;{{skills.skillName}}</p>
-                    <div class="progress w-100" role="progressbar" aria-label="Example 1px high" [attr.aria-valuenow]="skills.progress" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress " role="progressbar" aria-label="Example 1px high" [attr.aria-valuenow]="skills.progress" aria-valuemin="0" aria-valuemax="100">
                         <div class="progress-bar  " [style.width.%]="skills.progress"></div>
                     </div>
 
@@ -18,19 +18,92 @@
         <div class="footer">
             <hr class="text-success">
 
-            <div class="row g-3 flex-wrap">
-                <p class="text-white">Enquirey</p>
-                <div class="col-md-6  ">
-                    <input type="text" class="form-control input-placeholder-color" placeholder="First name" aria-label="First name">
+            <div class=" endDesign row g-3 flex-wrap d-flex">
+                <div class="col-md-6 ">
+                    <div class="row d-flex flex-wrap">
+                        <div class="col-md-4">
+                            <a href="" class="  nav-link"> <i class="fa-brands fa-square-instagram "> </i> &nbsp; <span>instagram</span></a>
+
+                        </div>
+                        <div class="col-md-4">
+                            <a href="" class=" nav-link"> <i class="fa-brands fa-linkedin "></i> &nbsp; <span>Linkedin</span></a>
+
+                        </div>
+                        <div class="col-md-4">
+                            <a href="" class=" nav-link"> <i class="fa-brands fa-square-whatsapp"></i> &nbsp; <span>Whatsapp</span></a>
+
+                        </div>
+                        <div class="col-md-12 text-white">
+
+                            <p class="text-white"><i class="fa-solid fa-copyright"></i><span class="names">Ajith R</span> , 2023 ! All RIghts Reserved</p>
+                            <p class="text-white"> All content and materials on this website, including but not limited to text, images, graphics, logos, videos, code, are the intellectual property of <span class="names">Ajith R</span> and protected by international copyright
+                                laws. No part of this website may be reproduced, distributed, or transmitted in any form or by any means, without the prior written permission of <span class="names">Ajith R</span>. unauthorized use or reproduction of any
+                                content from this website is strictly prohibited and may resultin legal action. FOr inquiries regarding the use or licensing of any materil on this website, please contact <span class="names">ajith98ra@gmail.com</span>                                . <i class="fa-solid fa-copyright"></i>
+                                <span class="names">Ajith R</span> 2023 All Rights Reserved</p>
+                        </div>
+                    </div>
+
+
+
                 </div>
-                <div class="col-md-6">
-                    <input type="text" class="form-control input-placeholder-color" placeholder="Last name" aria-label="Last name">
+
+                <div class="col-md-6 justify-content-end">
+                    <p class="text-white">Enquirey</p>
+                    <form action="" [formGroup]="submitquery">
+                        <div class="d-flex">
+                            <div class="col-md-6">
+                                <input type="text" formControlName="fname" class="form-control  text-white input-placeholder-color" placeholder="First name" aria-label="First name">
+                                <p class="text-danger">{{nameerror}}</p>
+                            </div>
+
+                            &nbsp;&nbsp;
+                            <div class="col-md-6">
+                                <input type="text " formControlName="email" class="form-control text-white input-placeholder-color" placeholder="Email" aria-label="Last name">
+                                <p class="text-danger">{{mailerror}}</p>
+                            </div>
+                        </div><br>
+                        <div class="col-md-12">
+                            <textarea formControlName="comments" class="form-control  text-white input-placeholder-color" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                            <p class="text-danger">{{commentserror}}</p>
+                        </div><br>
+                        <div class="home-btn">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary" (click)="Onsubmit()"> submit</button>
+                        </div>
+                    </form>
+                    <div *ngIf="popup" class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5 names" id="exampleModalLabel"> Thank You !</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body names">
+                                    will get back to you soon !
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn home-btn" data-bs-dismiss="modal">Close</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+            <br><br>
+            <div class="row">
+                <div class="col">
+                    --------------------------------------
                 </div>
             </div>
         </div>
 
 
     </div>
+
 
 
 

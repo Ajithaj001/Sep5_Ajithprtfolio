@@ -100,6 +100,9 @@
 }
 
 @media (max-width:1170px) {
+    .container-fluid {
+        overflow: hidden;
+    }
     .homeImage {
         position: absolute;
         max-height: 410px;
@@ -107,17 +110,18 @@
     }
     .home {
         position: absolute;
-        top: 90%;
+        top: 87%;
         /* width: 230px; */
         /* text-align: center; */
-        left: 45%;
+        left: 47%;
     }
     .home p {
         word-wrap: break-word;
-        width: 370px;
+        width: 300px;
     }
     .home-btn {
         position: absolute;
         top: 104%;
+        left: 1%;
     }
 }

@@ -2,6 +2,18 @@
     left: 350px;
 }
 
+.Ptitle {
+    color: rgb(28, 160, 5);
+}
+
+span .carousel-control-prev-icon {
+    color: rgb(28, 160, 5);
+}
+
+.arrow {
+    color: rgb(28, 160, 5);
+}
+
 .card {
     background-color: transparent;
     border: 2px solid rgb(28, 160, 5);
@@ -58,13 +70,15 @@
         top: 730px;
         left: 1%;
         width: 390px;
+        overflow-x: hidden;
+        overflow: hidden;
     }
     .carousel-item {
         left: 12%;
         width: 580px;
     }
     .card-body {
-        max-height: 100px;
+        max-height: 120px;
         width: 300px;
         /* overflow-x: hidden; */
         overflow-y: scroll;
