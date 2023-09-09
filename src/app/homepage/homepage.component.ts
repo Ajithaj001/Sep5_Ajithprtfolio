@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CommentsaddService } from './../services/commentsadd.service';
 
 @Component({
   selector: 'app-homepage',
@@ -10,11 +11,14 @@ export class HomepageComponent {
   isVisible = false
   buttonName:any
   isloading =false
-  constructor( private router: Router, private route: ActivatedRoute){
+  getalldata:any
+  @Output() footerData = new EventEmitter<boolean>();
+  constructor( private router: Router, private route: ActivatedRoute, private service:CommentsaddService){
 
   }
   OnClick(){
   this.isloading =true
+  this.footerData.emit(this.isloading);
 
   setTimeout(() => {
     this.router.navigate(['details'], { relativeTo: this.route })
@@ -22,6 +26,12 @@ export class HomepageComponent {
       this.isloading = false
     
   }, 1000);
+  this.service.fetchData().subscribe((resonse)=>{
+    this.getalldata = resonse
+    console.log(this.getalldata);
+    
+    
+  })
    
       
       
@@ -30,5 +40,20 @@ export class HomepageComponent {
     
 
   }
+//   ngOnInit(){
+// this.getdata()
+//   }
+
+  getdata(){
+    // this.service.fetchData().subscribe((resonse)=>{
+    //   this.getalldata = resonse
+    //   console.log(this.getalldata);
+      
+      
+    // })
+
+  }
+
+
 
 }

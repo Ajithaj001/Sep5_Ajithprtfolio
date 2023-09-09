@@ -18,6 +18,10 @@ body {
 }
 
 @media (max-width:1170px) {
+    body {
+        overscroll-behavior: none;
+        max-zoom: none;
+    }
     /* body {
         overflow-x: hidden ;
     } */

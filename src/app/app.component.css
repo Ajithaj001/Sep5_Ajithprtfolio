@@ -34,4 +34,11 @@
         flex-direction: row;
         column-gap: 20px;
     }
+    .navbar {
+        overflow-x: hidden;
+        overflow: hidden;
+    }
+    .container-fluid {
+        overflow: hidden;
+    }
 }

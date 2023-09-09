@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { v4 as uuidv4 } from 'uuid';
+import { CommentsaddService } from '../services/commentsadd.service';
 
 @Component({
   selector: 'app-technical-skills',
@@ -15,6 +17,8 @@ export class TechnicalSKillsComponent {
   mailerror:any
   commentserror:any
   popup = false
+  formdata:any;
+  name:any;
 
   technicalSkills = [
     {id:'1', skillName: "Angular" , progress : 95 , imagePath:'../assets/angular2.png'},
@@ -25,7 +29,7 @@ export class TechnicalSKillsComponent {
     {id:'6', skillName: "SQL", progress: 65,imagePath:'../assets/sqllogo.png'}
   ]
 
-  constructor( private formbuilder: FormBuilder){
+  constructor( private formbuilder: FormBuilder, private service: CommentsaddService){
     this.submitquery = this.formbuilder.group({
       fname:[null ,Validators.required],
       email:[null, Validators.required],
@@ -84,13 +88,50 @@ export class TechnicalSKillsComponent {
     
       if(this.submitquery.value.fname == null || this.submitquery.value.fname == '' && this.submitquery.value.email == null || this.submitquery.value.email == '' && this.submitquery.value.comments ==null || this.submitquery.value.comments == ''){
         this.popup = false
+
       }
       else{
         this.popup = true
+      
       }
    
-    
+    this.formsubmit()
     
   
+  }
+  refresh(){
+    location.reload()
+  }
+
+  formsubmit(){
+   
+    
+    const newUuid = uuidv4();
+    const body={
+      id:newUuid,
+      name:this.submitquery.value.fname,
+      email:this.submitquery.value.email,
+      comments:this.submitquery.value.comments,
+
+    }
+    console.log(body);
+    this.name= this.submitquery.value.fname
+    
+    this.service.postdata(body).subscribe({
+      next: (response) => {
+        this.formdata=response
+        
+        console.log(response);
+        
+
+    
+      },
+      error: (error) => {
+        console.error(error.message);
+        
+      }
+    })
+
+    
   }
 }
