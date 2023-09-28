@@ -34,5 +34,16 @@ export class CommentsaddService extends BaseService {
     // Return an observable with a user-facing error message.
     return throwError('Something went wrong. Please try again later.');
   }
+
+  //topassboolean
+  private sharedData: any;
+
+  setSharedData(data: any) {
+    this.sharedData = data;
+  }
+
+  getSharedData(): any {
+    return this.sharedData;
+  }
  
 }

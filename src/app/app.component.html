@@ -1,41 +1,123 @@
-<div class="container-fluid ">
+<header>
 
+    <nav class="navbar navbar-expand-lg  w-100">
+        <div class="container-fluid">
+            <div class="col-md-11 text-white fs-2">
+                <img src="../assets/logo1.png " alt="" width="20px"> MyPortfolio
 
-    <header>
-
-        <nav class="navbar navbar-expand-lg  w-100">
-            <div class="container-fluid">
-                <div class="col-md-11 text-white">
-                    <img src="../assets/logo1.png " alt="" width="20px"> MyPortfolio
-
-                </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
 
             </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 
-                    <div class="row d-flex">
+                <div class="row d-flex">
 
-                        <div class="col justify-content-end align-items-end">
-                            <div class="navbar-nav">
-                                <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
-                                <a class="nav-link" href="#">Features</a>
+                    <div class="col justify-content-end align-items-end">
+                        <div class="navbar-nav ">
+                            <a class="nav-link active " routerLink="/Home" routerLink="/"><span><i class="fa-solid fa-house"><span class="textnav">Home</span></i></span></a>
+                            <a class="nav-link " routerLink="/service"><span><i class="fa-solid fa-desktop"><span class="textnav">servives</span></i></span></a>
 
 
-                            </div>
                         </div>
                     </div>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<hr class="names">
+
+
+<main>
+
+    <router-outlet>
+    </router-outlet>
+</main>
+
+
+<footer class="footer">
+
+    <hr class="line">
+
+
+
+    <div class="row  d-flex flex-wrap p-2">
+        <div class="col-md-6">
+            <div class="row d-flex   ">
+                <div class="col-md-4 ">
+                    <a href="" class="  nav-link"> <i class="fa-brands fa-square-instagram "> </i> &nbsp; <span>instagram</span></a>
+
+                </div>
+                <div class="col-md-4">
+                    <a href="" class=" nav-link"> <i class="fa-brands fa-linkedin "></i> &nbsp; <span>Linkedin</span></a>
+
+                </div>
+                <div class="col-md-4">
+                    <a href="" class=" nav-link"> <i class="fa-brands fa-square-whatsapp"></i> &nbsp; <span>Whatsapp</span></a>
+
+                </div>
+                <div class="col-md-12 text-white">
+
+                    <p class="text-white"><i class="fa-solid fa-copyright"></i><span class="names">Ajith R</span> , 2023 ! All RIghts Reserved</p>
+                    <p class="text-white"> All content and materials on this website, including but not limited to text, images, graphics, logos, videos, code, are the intellectual property of <span class="names">Ajith R</span> and protected by international copyright laws.
+                        No part of this website may be reproduced, distributed, or transmitted in any form or by any means, without the prior written permission of <span class="names">Ajith R</span>. unauthorized use or reproduction of any content from
+                        this website is strictly prohibited and may resultin legal action. FOr inquiries regarding the use or licensing of any materil on this website, please contact <span class="names">ajith98ra@gmail.com</span> . <i class="fa-solid fa-copyright"></i>
+                        <span class="names">Ajith R</span> 2023 All Rights Reserved</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-6">
+            <p class="text-white">Enquirey</p>
+            <form action="" [formGroup]="submitquery">
+                <div class="d-flex">
+                    <div class="col-md-6">
+                        <input type="text" formControlName="fname" class="form-control  text-white input-placeholder-color" placeholder="First name" aria-label="First name">
+                        <p class="text-danger">{{nameerror}}</p>
+                    </div>
+
+                    &nbsp;&nbsp;
+                    <div class="col-md-6">
+                        <input type="text " formControlName="email" class="form-control text-white input-placeholder-color" placeholder="Email" aria-label="Last name">
+                        <p class="text-danger">{{mailerror}}</p>
+                    </div>
+                </div><br>
+                <div class="col-md-12">
+                    <textarea formControlName="comments" class="form-control  text-white input-placeholder-color" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                    <p class="text-danger">{{commentserror}}</p>
+                </div><br>
+                <div class="home-btn">
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary" (click)="Onsubmit()"> submit</button>
+                </div>
+            </form>
+
+
+        </div>
+
+    </div>
+
+    <div *ngIf="popup" class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 names" id="exampleModalLabel"> Thank You ! {{name}}</h1>
+                    <button type="button" class="btn-close" (click)="refresh()" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body names">
+                    will get back to you soon !
+                </div>
+                <div class="modal-footer">
+                    <!-- <button type="button" class="btn home-btn"  data-bs-dismiss="modal">Close</button> -->
 
                 </div>
             </div>
-        </nav>
-    </header>
+        </div>
+    </div>
 
 
-
-    <body>
-        <router-outlet></router-outlet>
-    </body>
-
-</div><br>
+</footer>
+<app-scroll-to-top></app-scroll-to-top>
+<br>

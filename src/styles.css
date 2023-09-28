@@ -8,6 +8,11 @@ body {
     overflow-x: hidden;
 }
 
+.icon {
+    color: rgb(28, 160, 5);
+    ;
+}
+
 @media (max-width:768px) {
     /* body {
         overflow-x: hidden ;
@@ -19,8 +24,7 @@ body {
 
 @media (max-width:1170px) {
     body {
-        overscroll-behavior: none;
-        max-zoom: none;
+        overflow-x: hidden;
     }
     /* body {
         overflow-x: hidden ;
@@ -48,3 +52,13 @@ body {
                                         overflow-x: hidden;
                                     }
                                 } */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}

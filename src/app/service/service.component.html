@@ -1,0 +1,45 @@
+<div class="container-fluid">
+    <h2 class="fw-semibold text-white"><i class="fa-solid fa-gears icon"></i>&nbsp;Services</h2>
+    <div class="row service">
+        <div class="col">
+            <!-- services.component.html -->
+
+            <div class="container">
+
+                <div class="slideshow">
+                    <ng-container *ngFor="let image of images; let i = index">
+                        <img width="500px" [@imageAnimation]="i === activeImage ? 'visible' : 'hidden'" [src]="image" alt="Image {{ i + 1 }}" />
+                    </ng-container>
+                </div>
+            </div>
+
+        </div>
+        <div class="col p-5">
+
+            <div class="service-card text-white">
+                <h2><i class="fa-solid fa-forward icon"></i>Web Development</h2>
+                <p>
+                    I specialize in creating responsive and user-friendly websites using modern web technologies.
+                </p>
+            </div>
+
+            <div class="service-card text-white">
+                <h2><i class="fa-solid fa-forward icon"></i>Web Design</h2>
+                <p>
+                    I can create stunning website designs that captivate users and align with your brand.
+                </p>
+            </div>
+
+            <div class="service-card text-white">
+                <h2><i class="fa-solid fa-forward icon"></i>Custom Solutions</h2>
+                <p>
+                    I offer custom web solutions tailored to your specific needs, from e-commerce to web apps.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Add more service cards as needed -->
+</div>

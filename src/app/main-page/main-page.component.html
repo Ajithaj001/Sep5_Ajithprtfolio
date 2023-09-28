@@ -1,0 +1,45 @@
+<div class="container-fluid ">
+    <div class="row d-flex flex-wrap  main ">
+        <div class="col-md-7 homeImage ">
+            <img class="  " src="../assets/MyImage.JPG" alt="">
+        </div>
+        <div class="col-md-5 homeText ">
+            <p class="text-white  fs-4  position-relative top-50 start-53 translate-middle ">Hi I am <span class=" fw-bolder name">Ajith</span> ,a passionate frontend developer dedicated to creating engaging and user-friendly web experiences.</p>
+
+        </div>
+        <div *ngIf="isloading" class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="col-md-12 home-btn d-flex justify-content-center ">
+            <button (click)="OnClick()" class="btn btn-primary  "> {{ isVisible ? "hide":"view more"}}</button>
+        </div>
+        <div class=" mt-5 col-md-12 projects text-white  projects  " *ngIf="isVisible">
+            <h2><i class="fa-solid fa-diagram-project icon"></i>Projects</h2>
+            <mat-accordion *ngFor="let details of projectdetails">
+
+                <mat-expansion-panel class=" headerExpansion  text-white " (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                    <mat-expansion-panel-header class="expansion">
+                        <mat-panel-title class="">
+                            Project Name: {{details.projectname}}
+                        </mat-panel-title>
+                        <!-- <mat-panel-description>
+                            Currently I am {{panelOpenState ? 'open' : 'closed'}}
+                        </mat-panel-description> -->
+                    </mat-expansion-panel-header>
+                    <p>Project Description: {{details.description}}</p>
+                </mat-expansion-panel>
+            </mat-accordion>
+
+        </div>
+        <div class="col-md-12 mt-5 skillview " *ngIf="isVisible">
+            <h2 class="text-white text "> <i class="fa-solid fa-code icon"></i>My skills</h2>
+            <div class="skills " *ngFor=" let skills of technicalSkills">
+                <p class="text-white"> <img class="icon " src={{skills.imagePath}} alt="">&nbsp;{{skills.skillName}}</p>
+                <div class="progress " role="progressbar" aria-label="Example 1px high" [attr.aria-valuenow]="skills.progress" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar  " [style.width.%]="skills.progress"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

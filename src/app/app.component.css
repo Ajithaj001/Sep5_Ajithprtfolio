@@ -19,9 +19,54 @@
     background-color: rgb(28, 160, 5);
 }
 
+hr.line {
+    border: none;
+    height: 4px;
+    background-color: rgb(28, 160, 5);
+    color: rgb(28, 160, 5);
+}
+
+.nav-link {
+    color: rgb(28, 160, 5);
+}
+
+.fa-copyright {
+    color: rgb(28, 160, 5);
+}
+
+.form-control {
+    background-color: transparent;
+    outline: 2px solid rgb(28, 160, 5);
+    border: none;
+}
+
+.names {
+    color: rgb(28, 160, 5);
+}
+
+.home-btn button {
+    border: 2px solid rgb(28, 160, 5);
+    border-radius: 10%;
+    background-color: rgb(28, 160, 5);
+}
+
+.input-placeholder-color::placeholder {
+    color: rgb(242, 235, 235);
+    /* Replace 'red' with your desired color */
+}
+
+.textnav {
+    font-family: 'Times New Roman', Times, serif;
+}
+
 @media screen and (max-width:768px) {
-    .nav-name {
-        margin-left: 40px;
+    .navbar-nav {
+        flex-direction: row;
+        column-gap: 29px;
+        /* left: 10%; */
+    }
+    .container-fluid {
+        overflow-x: hidden;
     }
 }
 
@@ -29,7 +74,7 @@
     /* .container {
         width: 100%;
         overflow-x: hidden;
-      } */
+    }
     .navbar-nav {
         flex-direction: row;
         column-gap: 20px;
@@ -40,5 +85,8 @@
     }
     .container-fluid {
         overflow: hidden;
-    }
+    } */
+    /* .footer {
+      
+    } */
 }

@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomepageComponent } from './homepage/homepage.component';
-import { DetailviewComponent } from './detailview/detailview.component';
+
+
+import { MainPageComponent } from './main-page/main-page.component';
+import { ServiceComponent } from './service/service.component';
 
 const routes: Routes = [
-  {path:'', redirectTo:'/Homepage', pathMatch:'full'},
-  {path:'Homepage', component:HomepageComponent, children:[
-    {path:'details', component:DetailviewComponent}
-  ]}
+  {path:'', redirectTo:'/Home', pathMatch:'full'},
+  {path:'Home', component:MainPageComponent},
+  {path:'service', component:ServiceComponent}
 ];
 
 @NgModule({
