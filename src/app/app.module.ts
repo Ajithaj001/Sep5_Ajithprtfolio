@@ -12,7 +12,10 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { MatDialogModule } from '@angular/material/dialog';
+import { CommonModule } from '@angular/common';
 import { ServiceComponent } from './service/service.component';
+
 
 
 @NgModule({
@@ -24,6 +27,7 @@ import { ServiceComponent } from './service/service.component';
     MainPageComponent,
     ScrollToTopComponent,
     ServiceComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -31,7 +35,10 @@ import { ServiceComponent } from './service/service.component';
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatDialogModule,
+    CommonModule
+   
     
   ],
   providers: [],

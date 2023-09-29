@@ -36,9 +36,9 @@
         padding: 88px;
     }
     .service {
-        top: 0;
         position: relative;
         width: 130%;
-        left: 1%;
+        padding-top: 0;
+        padding-left: 0;
     }
 }

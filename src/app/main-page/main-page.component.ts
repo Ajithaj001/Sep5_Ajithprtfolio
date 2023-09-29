@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CommentsaddService } from '../services/commentsadd.service';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogComponent } from '../dialog/dialog.component';
 
 
 
@@ -71,6 +73,7 @@ prevSlide() {
     this.currentindex = this.projectdetails.length - 1;
   }
 }   
+
       
 
 

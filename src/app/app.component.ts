@@ -2,6 +2,10 @@ import { Component, HostListener } from '@angular/core';
 import { CommentsaddService } from './services/commentsadd.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { v4 as uuidv4 } from 'uuid';
+import {  OnInit, ViewChild, ElementRef } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogComponent } from './dialog/dialog.component';
+import { TimecaptureService } from './services/timecapture.service';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +13,7 @@ import { v4 as uuidv4 } from 'uuid';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  @ViewChild('myModalContent') myModalContent: any;
   title = 'ajithportfolio';
   value:any
   skillId:any
@@ -20,15 +25,39 @@ export class AppComponent {
   formdata:any;
   name:any;
   showButton: boolean = false;
+  myTemplate:any;
 
-  constructor( private formbuilder: FormBuilder, private service: CommentsaddService){
+  constructor( private formbuilder: FormBuilder, private service: CommentsaddService,private dialog: MatDialog, private popupStateService:TimecaptureService){
     this.submitquery = this.formbuilder.group({
       fname:[null ,Validators.required],
       email:[null, Validators.required],
       comments:[null,Validators.required],
 
+
     })
+    this.openPopup()
+    
   }
+  ngOnInit() {
+   
+  }
+  openPopup(): void {
+    if (this.popupStateService.shouldDisplayPopup()) {
+      const dialogRef = this.dialog.open(DialogComponent, {
+        width: '400px',
+      });
+
+      dialogRef.afterClosed().subscribe(() => {
+        this.popupStateService.setPopupClosed();
+      });
+    }
+  }
+
+  
+
+ 
+
+ 
  
 
   scrollToTop() {
